@@ -1,0 +1,52 @@
+body {
+  background-image: url("../assets/background.jpg");
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+nav li a {
+  margin:10px;
+  float: right;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  border-radius: 17px;
+}
+
+button span {
+  color: white;
+}
+
+.container {
+  background-image: url("../assets/container-background.jpg");
+  border-radius: 5px;
+  height: 100%;
+  margin: 2% auto;
+  padding: 2% 2%;
+}
+
+.navbar {
+  background-color: black;
+  padding: auto 50%;
+  margin: auto;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.icon {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 1px 8px;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  border-radius: 17px;
+  margin:10px;
+}
+
+.feedback {
+  font-size: 12px;
+}
