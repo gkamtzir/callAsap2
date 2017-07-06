@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CountryService } from '../shared/country.service';
 
 @Component({
     moduleId: module.id,
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class SearchComponent {
+
+    constructor(private _countryService: CountryService) {}
 
 }

@@ -9,6 +9,8 @@ import { SearchComponent } from './search/search.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { CountryService } from './shared/country.service';
+
 @NgModule({
   imports:      [ BrowserModule,
                     HttpModule,
@@ -18,7 +20,8 @@ import { NavbarComponent } from './navbar/navbar.component';
                         { path: 'about', component: AboutComponent }
                     ])],
   declarations: [ AppComponent, HomeComponent, SearchComponent, AboutComponent, NavbarComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ CountryService ]
 })
 
 export class AppModule { }
