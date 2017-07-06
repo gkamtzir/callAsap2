@@ -1,4 +1,5 @@
 node_modules
 typings
+app/assets
 app/*.js
 app/*.js.map
