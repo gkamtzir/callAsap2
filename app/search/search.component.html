@@ -12,11 +12,15 @@
         <label for="country">Country:</label>
       </div>
       <div class="col-md-6">
-    
+          <select [(ngModel)]="country" (ngModelChange)="changeCountry(country)" class="form-control">
+              <option *ngFor="let country of countries" [ngValue]="country">{{country.Name}}</option>
+          </select>
       </div>
     </div>
   </div>
 
   <hr />
+
+  <country [country]="country" [emergencies]="emergencyPhoneNumbers"></country>
 
 </div>
