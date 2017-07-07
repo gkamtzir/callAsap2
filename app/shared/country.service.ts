@@ -20,15 +20,15 @@ export class CountryService {
                     .get('http://83.212.115.201/api.php/country')
                     .map((response: Response) => <ICountry[]>response.json());
     }
-    getCountry(country: string): Observable<ICountry> {
+    getCountry(country: ICountry): Observable<ICountry> {
         return this._http
-                    .get('http://83.212.115.201/api.php/country/' + country)
+                    .get('http://83.212.115.201/api.php/country/' + country.Name)
                     .map((response: Response) => <ICountry>response.json());
     }
 
-    getEmergencyPhoneNumbers(country: string): Observable<IEmergencyPhoneNumber[]> {
+    getEmergencyPhoneNumbers(country: ICountry): Observable<IEmergencyPhoneNumber[]> {
         return this._http
-                    .get('http://83.212.115.201/api.php/country/emergency/' + country)
+                    .get('http://83.212.115.201/api.php/country/emergency/' + country.Name)
                     .map((response: Response) => <IEmergencyPhoneNumber[]>response.json());
     }
 
