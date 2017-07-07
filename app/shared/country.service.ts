@@ -9,9 +9,9 @@ export class CountryService {
 
     constructor(private _http: Http){}
 
-    getCountryName(ip: string): Observable<ICountryName> {
+    getCountryName(): Observable<ICountryName> {
         return this._http
-                    .get('http://ip-api.com/json/' + ip)
+                    .get('https://freegeoip.net/json/')
                     .map((response: Response) => <ICountryName>response.json());
     }
 
@@ -20,9 +20,16 @@ export class CountryService {
                     .get('http://83.212.115.201/api.php/country')
                     .map((response: Response) => <ICountry[]>response.json());
     }
+
     getCountry(country: ICountry): Observable<ICountry> {
         return this._http
                     .get('http://83.212.115.201/api.php/country/' + country.Name)
+                    .map((response: Response) => <ICountry>response.json());
+    }
+
+    getCountryString(country: string): Observable<ICountry> {
+        return this._http
+                    .get('http://83.212.115.201/api.php/country/' + country)
                     .map((response: Response) => <ICountry>response.json());
     }
 
