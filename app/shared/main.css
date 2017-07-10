@@ -19,7 +19,6 @@ button span {
 .container {
   background-image: url("../assets/container-background.jpg");
   border-radius: 5px;
-  height: 100%;
   margin: 2% auto;
   padding: 2% 2%;
 }
@@ -49,4 +48,8 @@ button span {
 
 .feedback {
   font-size: 12px;
+}
+
+.center {
+    text-align: center;
 }
