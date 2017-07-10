@@ -13,6 +13,7 @@
       </div>
       <div class="col-md-6">
           <select [(ngModel)]="country" (ngModelChange)="changeCountry(country)" class="form-control">
+              <option [ngValue]="nothing" disabled>Select Country</option>
               <option *ngFor="let country of countries" [ngValue]="country">{{country.Name}}</option>
           </select>
       </div>
