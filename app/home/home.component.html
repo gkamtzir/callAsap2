@@ -2,6 +2,10 @@
 
   <h1>What is your emergency?</h1>
 
-  <country [country]="country" [emergencies]="emergencyPhoneNumbers"></country>
+  <country *ngIf="country" [country]="country" [emergencies]="emergencyPhoneNumbers"></country>
+
+  <div *ngIf="country === false">
+      Sorry, there are no results for this country.
+  </div>
 
 </div>
